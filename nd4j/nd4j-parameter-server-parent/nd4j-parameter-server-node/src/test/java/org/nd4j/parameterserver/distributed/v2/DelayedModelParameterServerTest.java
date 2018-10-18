@@ -22,6 +22,7 @@ import lombok.val;
 import org.apache.commons.lang3.RandomUtils;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
@@ -110,6 +111,7 @@ public class DelayedModelParameterServerTest {
         }
     }
 
+    @Ignore
     @Test
     public void testUpdatesPropagation_1() throws Exception {
         val conf = VoidConfiguration.builder().meshBuildMode(MeshBuildMode.PLAIN).build();
@@ -301,6 +303,7 @@ public class DelayedModelParameterServerTest {
         assertTrue(gotGradients.get());
     }
 
+    @Ignore
     @Test
     public void testMeshConsistency_1() throws Exception {
         Nd4j.create(1);
@@ -380,7 +383,7 @@ public class DelayedModelParameterServerTest {
         }
     }
 
-
+    @Ignore
     @Test
     public void testMeshConsistency_2() throws Exception {
         Nd4j.create(1);
